@@ -36,5 +36,12 @@ namespace RandomNameGeneratorTests
             fullName = NameGenerator.Generate(Gender.Female);
             Assert.AreEqual(string.IsNullOrEmpty(fullName), false);
         }
+
+        [Test]
+        public void ShouldGenerateFirstNameWithoutSpecifyingGender()
+        {
+            var firstName = NameGenerator.GenerateFirstName();
+            Assert.AreEqual(string.IsNullOrEmpty(firstName), false);
+        }
     }
 }
